@@ -4,7 +4,7 @@
 This module will help manage both GlusterFS servers and clients.
 
 ## Usage
-Below is a sample class that would setup a GlusterFS server and client.
+Below is a sample class that would setup a GlusterFS server and client on a node.
 
 <pre>
 class glusterhost {
@@ -24,4 +24,4 @@ class glusterhost {
 }
 </pre>
 
-It will will the latest versions of GlusterFS from the Debian Unstable repository, along with create the required server and client configs.  It will also create an fstab entry for the client mount.  See `manifests/server/config.pp` and `manifests/client/config.pp` for the options you can configure.
+It will will the latest versions of GlusterFS from the Debian Unstable repository, along with create the required server and client configs.  It will also create an `/etc/fstab` entry for the client mount.  See `manifests/server/config.pp` and `manifests/client/config.pp` for the options you can specify.
