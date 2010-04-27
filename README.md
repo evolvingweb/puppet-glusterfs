@@ -1,4 +1,4 @@
-# GlusterFS modules for Puppet
+# GlusterFS module for Puppet
 
 ## Description
 This module will help manage both GlusterFS servers and clients.
