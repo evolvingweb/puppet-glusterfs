@@ -16,7 +16,7 @@ end-volume
 
 volume mirror-0
 	type cluster/replicate
-	subvolumes <%= servers.collect { |x| "vol-#{servers.index(x)}" }.join(" ") %>
+	subvolumes <%= servers.map{|s| "vol-#{servers.index(s)}"}.join(" ") %>
 	<% if servers.index(hostname) -%>
 	option read-subvolume vol-<%= servers.index(hostname) %>
 	<% end -%>
