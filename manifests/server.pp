@@ -2,10 +2,8 @@
 
 class glusterfs::server inherits glusterfs::client {
 
-	apt::force { "glusterfs-server":
-		release => "unstable",
-		version => $verion,
-		require => Apt::Source["${apt_source}"],
+	package { "glusterfs-server":
+		ensure => installed
 	}
 	
 	service { "glusterfs-server":
@@ -13,6 +11,7 @@ class glusterfs::server inherits glusterfs::client {
 		ensure => running,
 		hasrestart => true,
 		hasstatus => true,
+		require => Package["glusterfs-server"]
 	}
 
 }

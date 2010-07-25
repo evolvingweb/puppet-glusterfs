@@ -24,4 +24,4 @@ class glusterhost {
 }
 </pre>
 
-It will will the latest versions of GlusterFS from the Debian Unstable repository, along with create the required server and client configs.  It will also create an `/etc/fstab` entry for the client mount.  See `manifests/server/config.pp` and `manifests/client/config.pp` for the options you can specify.
+It will create the required server and client configs.  It will also create an `/etc/fstab` entry for the client mount.  See `manifests/server/config.pp` and `manifests/client/config.pp` for the options you can specify.

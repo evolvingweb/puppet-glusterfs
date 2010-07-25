@@ -32,7 +32,7 @@ define glusterfs::server::config(
 		mode => 644,
 		content => template("glusterfs/server.config.erb"),
 		notify => Service["glusterfs-server"],
-		require => [ Apt::Force["glusterfs-server"], File["${datapath}"] ],
+		require => [ Package["glusterfs-server"], File["${datapath}"] ],
 	}
 
 }

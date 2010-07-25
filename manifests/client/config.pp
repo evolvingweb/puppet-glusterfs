@@ -39,7 +39,7 @@ define glusterfs::client::config(
 		mode => 644,
 		content => template("glusterfs/client.config.erb"),
 		notify => Mount["${mountpath}"],
-		require => Apt::Force["glusterfs-client"],
+		require => Package["glusterfs-client"],
 	}
 	
 	mount { "${mountpath}":
